@@ -1,0 +1,33 @@
+## Additional resources
+
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this section. 
+
+# HTML meta tags
+https://www.dofactory.com/html/metatags
+
+# Semantic elements
+https://www.freecodecamp.org/news/semantic-html5-elements/
+
+# Simple bare bones HTML webpage
+https://www.instructables.com/Bare-Bones-Web-Page/
+
+# HTML5/CSS bare-bones newsletter template
+https://www.vandelaydesign.com/newsletter-tutorial/
+
+# Add open graph social metadata- Twitter
+https://www.digitalocean.com/community/tutorials/how-to-add-twitter-card-and-open-graph-social-metadata-to-your-webpage-with-html
+
+# Essential meta tags for social media
+https://css-tricks.com/essential-meta-tags-social-media/
+
+# The meta element
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+
+# Open graph protocol
+https://ogp.me/
+
+# Using open graph protocol on website
+https://ogp.me/
+
+# Meta OGP guide for webmasters
+https://www.freecodecamp.org/news/what-is-open-graph-and-how-can-i-use-it-for-my-website/
