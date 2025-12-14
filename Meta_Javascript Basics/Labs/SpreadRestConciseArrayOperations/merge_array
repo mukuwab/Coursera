@@ -1,0 +1,12 @@
+// Part 3: Merge Arrays
+const favoriteBaseballTeams = ["Yankees", "Mets", "Dodgers", "Giants", "Red Sox", "Cubs"];
+const favoriteFootballTeams = ["Patriots", "Giants", "Jets", "Eagles", "Steelers", "Cowboys"];
+
+/* Step 3:  Merging Arrays Using the Spread Operator  
+
+Use the spread operator to merge these two arrays into a single array called favoriteTeams.
+
+Print the favoriteTeams array to verify the output. */
+
+let favoriteTeams = [...favoriteBaseballTeams, ...favoriteFootballTeams];
+console.log(favoriteTeams);
