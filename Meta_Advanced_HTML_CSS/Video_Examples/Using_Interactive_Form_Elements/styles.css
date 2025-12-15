@@ -1,0 +1,59 @@
+#logo{
+    width: 10rem;
+    height: 9rem;
+    margin:auto;
+
+    /* use this method to center the logo */
+    display: block;
+    margin: 0 auto;
+    /* because <img> is default inline, doesnt respond to margin:auto */
+        /* using display:block */
+            /* turns element into block-level element */
+            /* will take up the full width */
+            /* now can be centered using margins */
+        /* margin: 0 auto; is shorthand for:
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        */
+}   
+
+ul{
+    flex-direction: row;
+}
+
+h1, h2{
+    text-align: center;
+    color:rgb(120, 18, 18);
+}
+
+html{
+    background-color: rgb(210, 255, 231);
+}
+
+
+/* reference the child p element of the article element */
+article > p {
+    text-align: center;
+}
+
+footer > p {
+    text-align: center;
+}
+
+/* make navigation bar elements aligned in a row */
+.nav{
+  display: flex;
+  gap: 1rem;/* space between items */
+  list-style: none;/* remove bullets */
+  padding: 0;
+  margin: auto;
+  
+  cursor: pointer;
+  
+  justify-content: center; /* centers items horizontally */
+}
+
+
+

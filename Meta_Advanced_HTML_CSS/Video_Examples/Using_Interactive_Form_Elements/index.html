@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- This structure describes the sematics of the html document -->
+        
+        <header>
+            <!-- Will be used to display the little lemon logo -->
+            <img src="icon.png" id="logo">
+        </header>
+        <nav>
+            <!-- Describes the navigational structure of the website -->
+            <!-- add navigation links in unordered list element (ul) -->
+                <!-- standard practice -->
+            <ul class="nav">
+                <!-- use anchor tab to add the links -->
+                <li><a href="index.html"></a>Home</li>
+                <li><a href="location.html"></a>Location</li>
+                <li><a href="blog.html"></a>Blog</li>
+            </ul>
+        </nav>  
+       
+        <main>
+            <!-- Add calander, range, and data list input types -->
+            <h1>Book a Table</h1>
+            <form method="POST">
+                <div>
+                    <label for="booking_date">Booking Date</label>
+                    <!-- 'for' attribute references the 'id' of the input. 
+                     Allows accessibility software to convey the purpose of 
+                     the input feild to the user-->
+                    <input type="date" id="booking_date" name="booking_date">
+                </div>
+                 <div>
+                    <label for="booking_people">Number of People</label>
+                    <!-- Range input type allows you to define the max and min
+                     values of the field -->
+                     <!-- Since 4 people is the most common, set the value attribute to
+                      4 so that the slider will default to 4 -->
+                     <input type="range" id="booking_people" name="booking_people" 
+                            min="1" 
+                            max="10" 
+                            value="4" 
+                            oninput="this.nextElementSibling.value = this.value"
+                     >
+                    <!-- Add an output element so the value of the slider is displayed -->
+                     <!-- the output element is a semantic html element that contains the result 
+                      of a calculation. Here it will display the value of the slider. Will need to
+                      use a small javascipt code to the input element (oninput)-->
+                        <!-- oninput="this.nextElement.value=this.value" -->
+                        <!-- This will update the value of the output element with the value of the
+                         slider as it changes. -->
+                        <output>4</output>
+                     <!-- set the initial value to 4 to match the default value of the input element -->
+                </div>
+                <div>
+                    <label for="booking_location">Location</label>
+                    <!-- Data list input type allows you to specify a list of availible options that will
+                     appear in a dropdown list. Allows the user to begin typing and it will dynamically narrow
+                     down the list of options based on input.-->
+                    <input id="booking_location" name="booking_location" list="locations">
+                    <!-- make sure to add to 'list' attribute to the input when using a datalist -->
+                    <datalist id="locations">
+                        <option value="Downtown"></option>
+                        <option value="Uptown"></option>                        
+                    </datalist>
+                    <!-- in the datalist element, the 'id' should match the 'list' attribute of the
+                     input element above -->
+
+                </div>                               
+                <div>
+                  <button type="submit">Book Table</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <!-- display copyright information -->
+             <p>Copyright Little Lemon</p>
+        </footer>
+
+    </body>
+</html>
+
+<!-- semantic tags help accessibility software to understand structure and meaning of document -->
