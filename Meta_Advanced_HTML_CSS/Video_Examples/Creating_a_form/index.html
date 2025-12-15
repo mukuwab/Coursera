@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <h1>Sign Up</h1>
+            <!-- use POST for secure HTTP transfer upon submit -->
+            <form>
+                <!-- create a div element for each so each have own css block -->
+                <div>
+                    <label for="user_first_name">First Name</label>
+                    <!--to associate label with input feild add the 'for' attribute and set
+                    the value to match the 'id' attribute of the input element -->
+                    <!-- add line break <br> after the label so the input feild displays below the label-->
+                    <input type="text" id="user_first_name" name="user_first_name">
+                    <!-- name attribute sets the key for the value submitted to the web server -->
+                </div>
+                    <label for="user_last_name">First Name</label>
+                    <input type="text" id="user_last_name" name="user_last_name">
+                <div>
+                    <label for="user_email">Email</label>
+                    <input type="email" id="user_email" name="user_email">
+                    <!-- defining email as type utilizes html's client side validation -->
+                </div>
+                     <label for="user_password">Password</label>
+                    <input type="password" id="user_password" name="user_password">
+                <div>
+                    <label for="user_confirm_password">Confirm Password</label>
+                    <input type="password" id="user_confirm_password" name="user_confirm_password">
+                </div>
+                 
+                <div>
+                    <button type="submit">Sign Up</button>
+
+                </div>
+                 
+                <div>
+
+                </div>
+            </form>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+input, label{
+    margin-bottom: 0.5rem;
+    display: block;
+    margin: auto;
+}
+
+form, h1, button{
+    text-align: center;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+button{
+    margin-top: 1rem;
+}
+
