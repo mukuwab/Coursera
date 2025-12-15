@@ -1,0 +1,63 @@
+In this lab, you will:
+
+Count Words in a File
+
+Redirect Errors to a File
+
+Search for Substrings in a File 
+
+1. Count Words in a File :
+
+ 1.1 Create  a new file 'file.txt' and write the string "Welcome to Unix Shell Programming " into it.
+
+##    touch file.txt
+
+echo "Welcome to Unix Shell Programming"  >> file.txt
+
+touch command creates a new file 
+
+The string "Welcome to Unix Shell Programming " will be written to the file  using >>  redirection operator.
+
+1.2 Use the cat command to display the content of a file and pipe it to wc -w to count the number of words in the file.  
+
+##    cat file.txt | wc -w
+
+ cat file.txt:  Outputs the content of file.txt to the standard output.
+
+wc -w: Counts the words from the input.
+
+2.  Redirect Errors to a File  
+
+ 2.1 List the contents of a non-existent directory and save the error message to a file
+
+ ##   ls -l /bin/directory-that-does-not-exist 2> error.txt
+
+ ls -l /bin/directory-that-does-not-exist: Tries to list the directory.
+
+Redirects standard error (stderr) to error.txt.
+
+ 2.2  Count the number of characters in the error.txt file
+
+ ##   wc -c < error.txt
+
+ 3. Search for Substrings in a File  
+
+ Use the grep command to find and count words in a file that partially match a specified substring.  
+
+echo " Unix is a powerful operating system. Learning unix  commands is very much essential to work on a Unix based system" >> file.txt
+
+##  grep -i -w Unix file.txt | wc -w
+
+ grep -i  Unix file.txt: Finds all lines in file.txt that contain the substring Unix, ignoring case (-i).
+
+wc -w: Counts the words in the matched lines.
+
+By the end of this lab, you will be able to:
+
+Count words and characters in files using cat and wc.
+
+Redirect error messages to a file and analyze them.
+
+Search for substrings in files with grep and count matches.
+
+Gain foundational skills in text processing and file handling in a Unix environment.
