@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo.png" id="logo">
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html"></a>Home</li>
+                <li><a href="location.html"></a>Location</li>
+                <li><a href="blog.html"></a>Blog</li>
+            </ul>
+        </nav>  
+       
+        <main>
+            <video 
+                src="intro.mp4" 
+                type="video/mp4" 
+                controls 
+                width="320"
+                height="240"
+            >
+            </video>
+            <form>
+                <div>
+                    <label for="rating">Rating</label>
+                    <input id="rating" type="range" name="rating" min="1" max="5" list="ratings">
+                    <datalist id="ratings">
+                        <options value="1">1</options>
+                        <options value="2">2</options>
+                        <options value="3">3</options>
+                        <options value="4">4</options>
+                        <options value="5">5</options>                  
+                    </datalist>
+                </div>
+                <button type="submit">Submit Rating</button>
+            </form>
+           
+        </main>
+        <footer>
+             <p>Copyright Little Lemon</p>
+        </footer>
+
+    </body>
+</html>
+

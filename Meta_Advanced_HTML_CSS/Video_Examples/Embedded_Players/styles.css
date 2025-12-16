@@ -2,21 +2,8 @@
     width: 10rem;
     height: 9rem;
     margin:auto;
-
-    /* use this method to center the logo */
     display: block;
     margin: 0 auto;
-    /* because <img> is default inline, doesnt respond to margin:auto */
-        /* using display:block */
-            /* turns element into block-level element */
-            /* will take up the full width */
-            /* now can be centered using margins */
-        /* margin: 0 auto; is shorthand for:
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-left: auto;
-            margin-right: auto;
-        */
 }   
 
 ul{
@@ -30,12 +17,6 @@ h1, h2{
 
 html{
     background-color: rgb(210, 255, 231);
-}
-
-
-/* reference the child p element of the article element */
-article > p {
-    text-align: center;
 }
 
 footer > p {
@@ -55,9 +36,13 @@ footer > p {
   justify-content: center; /* centers items horizontally */
 }
 
-button{
+audio, video{
     display: block;
-    margin: 2rem auto;
+    margin: auto;
+}
+
+p{
+    text-align: center;
 }
 
 footer{
