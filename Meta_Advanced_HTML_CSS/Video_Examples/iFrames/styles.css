@@ -30,13 +30,12 @@ footer > p {
   list-style: none;/* remove bullets */
   padding: 0;
   margin: auto;
+  
   cursor: pointer;
+  
   justify-content: center; /* centers items horizontally */
 }
 
-main{
-    margin:5%;
-}
 
 
 footer{

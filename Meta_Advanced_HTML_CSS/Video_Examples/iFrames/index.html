@@ -1,0 +1,49 @@
+<!-- iFrames -->
+ <!-- allows you to embed content from another website into a webpage -->
+<!-- often used for advertising -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Lemon</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo.png" id="logo">
+        </header>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html"></a>Home</li>
+                <li><a href="location.html"></a>Location</li>
+                <li><a href="blog.html"></a>Blog</li>
+            </ul>
+        </nav>  
+       
+        <main>
+            <iframe 
+                src="https://www.example.com"
+                height="150"
+                width="200"
+                allow="camera 'none'; microphone 'none';"
+                sandbox="allow-downloads"
+            >
+            </iframe>
+            <!-- iFrames create vulnerability to malicious code and injections. 
+             Therefore, its important to trust the website that you are pulling 
+             the http and css from -->
+            <!-- allow attribute limits which features the iFrame can access: like
+              camera and microphone access-->
+            <!-- sandbox attribute limits functions from within the iFrame like disallowing
+               popups or downloads -->
+            <!-- when the sandbox attribute is used with empty quotes [sandbox=""] then all
+                sandbox restrictions will apply to the iFrame -->
+            <!-- Allowing cetrain sandbox attributes can be done with attributes -->
+        </main>
+        <footer>
+             <p>Copyright Little Lemon</p>
+        </footer>
+
+    </body>
+</html>
+
