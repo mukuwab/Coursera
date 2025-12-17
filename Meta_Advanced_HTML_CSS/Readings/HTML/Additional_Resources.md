@@ -49,3 +49,20 @@ https://www.webfx.com/web-design/learn/why-does-your-website-look-different-in-d
 
 # HTML Form submission – sending form data
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data
+
+
+https://html.com/media/
+
+https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+
+https://www.educba.com/iframes-in-html/
+
+https://www.tutorialrepublic.com/html-tutorial/html5-canvas.php
+
+https://html.spec.whatwg.org/multipage/media.html
+
+# flex box
+
+https://css-tricks.com/css-flexbox-layout-guide/#aa-basics-and-terminology
