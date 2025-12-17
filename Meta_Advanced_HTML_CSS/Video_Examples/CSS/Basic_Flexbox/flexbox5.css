@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* * Applys rules to every single element in the css code */
+/* can be used to clear any broswer specific formatting */
+.container{
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-flow is a shorthand property speicifying the direction
+    of the flex container and the behavior for wrapping*/
+    justify-content: stretch;
+    /* aligns the items in the container long the main axis */
+}
+
+.container li{
+    list-style-type: none;
+}
+
+.container a{
+    display: inline-block;
+    padding: 25px;
+    margin: 0 25px;
+    text-align: center;
+
+}
