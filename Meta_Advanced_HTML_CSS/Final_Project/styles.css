@@ -1,10 +1,23 @@
+
+header{
+    background-color: rgb(7, 65, 45);
+    padding: 0.01rem;
+}
+
+nav{
+    background-color: rgb(7, 65, 45);
+    padding: 0.01rem;
+}
+
+
 header > img{
     width: 4rem;
     height: 6.8rem;
     margin:auto;
     display: block;
-    margin: 2rem auto;
-}
+    margin: 0rem auto;
+    margin-top: 1rem;
+    }
 
 body{
     background-color: rgb(5, 35, 10);
@@ -64,5 +77,23 @@ section img{
 .promo span{
     color: rgb(189, 229, 30);
     font-weight: 600;
+}
+
+footer > div{
+    display: flex ;
+    color:aliceblue;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: rgb(7, 65, 45);
+    padding: 1rem;
+}
+
+footer img {
+    width: 3rem;
+}
+
+footer p{
+    margin-top: 2.6rem;
 }
 
