@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 
+// This is how you declare a new component
+function Heading(){
+  return(
+    <h1>This is an h1 heading</h1>
+  )
+}
+
+// function MathFunction({a,b}){
+//   sum = a + b;
+
+//   return(
+//     <h1>{sum}</h1>
+//   )
+// }
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <Heading/>
+      {/* <MathFunction a={1} b={2} /> */}
     </div>
   );
 }
