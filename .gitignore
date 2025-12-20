@@ -1,3 +1,10 @@
+#### This Git ignore is import for react apps
+# will ignore the react modules impedded in the project files
+# the .gitignore file must be in the project root, in this case the Coursera folder where the hidden git file is stored
+# the git file is .git and can be seen using command line prompt in the root 
+######## Get-ChildItem -Force
+######## shows .git
+
 # dependencies
 node_modules/
 
