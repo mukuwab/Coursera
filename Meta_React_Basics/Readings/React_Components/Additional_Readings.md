@@ -40,3 +40,16 @@ https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 Visual Studio Code keyboard shortcuts (macOS)
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+
+Components and props
+ https://reactjs.org/docs/components-and-props.html
+
+Intoducing JSX
+ https://reactjs.org/docs/introducing-jsx.html
+
+Styling and CSS in React
+ https://reactjs.org/docs/faq-styling.html
+
+Introducing expressions in JSX
+ https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
