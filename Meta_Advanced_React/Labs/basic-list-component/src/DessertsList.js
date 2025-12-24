@@ -53,9 +53,11 @@ console.log(lowCalDesserts); // this array has been populated
 length
 3 */
 
-//sort the array alphabetically
+//sort the array by ascending calorie count
 
-const sortedArray = lowCalDesserts.sort()
+const sortedArray = lowCalDesserts.sort((a,b) => {
+  return a.calories - b.calories});// a- b allow sorting in ascending order
+
 console.log(sortedArray);
 
   return (
