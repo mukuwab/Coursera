@@ -64,8 +64,6 @@ Now, according to React context rules, all consumers that are descendants of a p
 
 Let’s go through the following scenario built upon the previous example, where the context value that gets injected is defined as an object called value with two properties, ‘a’ and ‘b’, being both strings. Also, ComponentC is now a consumer of context, so any time the provider value prop changes, ComponentC will re-render.
 
-
-
 const App = () => {
   const value = {a: 'hi', b: 'bye'};
   return (

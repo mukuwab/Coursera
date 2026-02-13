@@ -25,11 +25,9 @@ const result = ages.filter(checkAdult);
 function checkAdult(age) {
   return age >= 18;
 }
-
 */
 
 import React, {useState} from 'react';
-
 
 function DessertsList(props) {
   //In App.js <DessertsList data={dessert}/>
