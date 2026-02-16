@@ -6,6 +6,7 @@
 import './App.css';
 import { useState } from 'react';
 import Greeting from './Greeting';
+import Greeting2 from './Greeting2';
 
 function App() {
   
@@ -53,7 +54,7 @@ function App() {
       <Greeting/>
 
       <h1>Greeting Function in Greeting2.js</h1>
-      <Greeting/>
+      <Greeting2/>
 
     </div>
   );
