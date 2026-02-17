@@ -9,6 +9,9 @@ class Cat{//name names always uppercase
 var cat1 = new Cat('yellow','angry');
 console.log(cat1);
 
+//You can use dot notation to print these values
+console.log(`\nThe first cat is ${cat1.temperment} and ${cat1.hairColor}.\n`)
+
 var cat2 = new Cat('black','lazy');
 console.log(cat2);
 

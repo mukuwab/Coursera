@@ -11,9 +11,6 @@ console.log(fruit);
 
 console.log("\n");
 
-
-
-
 //Printing a specific value of the array
 
 console.log(fruit[2]);
