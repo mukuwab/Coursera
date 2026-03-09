@@ -3,7 +3,6 @@
 import './App.css';
 import React from "react";
 
-
 // Goal form - captures anew goal using a form
 function GoalForm(props){
   // accepts the props objects
@@ -86,7 +85,7 @@ function GoalForm(props){
     <ul>
       {props.allGoals.map((g) =>
         <li key={g.goal}>
-          <span>My goal is to {g.goal} by {g.by}</span>
+          <span>My goal is to {g.goal}                                                                                                                     by {g.by}</span>
         </li>
       )}
     </ul>
