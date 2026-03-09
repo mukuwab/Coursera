@@ -30,7 +30,7 @@ function App() {
       <h2>Last Name: {user.results[0].name.last}</h2>
     </div>
   ):(
-    <h1>Data pending</h1>
+    <h1>Data pending...</h1>
   );
 }
 //the change in value of the state variable will trigger a 
