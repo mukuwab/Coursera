@@ -15,3 +15,22 @@ Chakra-UI
  from the official React docs illustrates how to group a list of React children without adding extra nodes to the DOM.
  
  https://reactjs.org/docs/fragments.html
+
+
+ Here is a list of additional resources as you continue to explore Reusing Behavior:
+
+Downshift
+ is a popular open-source library that implements an autocomplete, combo box or select experience using the render prop pattern. 
+ https://github.com/downshift-js/downshift
+
+Render props
+ from the official React docs. 
+ https://reactjs.org/docs/render-props.html
+
+Higher Order Components
+ from the official React docs. 
+ https://reactjs.org/docs/higher-order-components.html
+
+Forwarding Refs
+ from the official React docs showcases in detail how to forward refs in higher-order components, so that they are passed through properly. 
+ https://reactjs.org/docs/forwarding-refs.html#forwarding-refs-in-higher-order-components
