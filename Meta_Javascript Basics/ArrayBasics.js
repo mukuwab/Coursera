@@ -8,7 +8,7 @@ var fruit = [
 
 //printing the array
 console.log(fruit);
-
+  
 console.log("\n");
 //Printing a specific value of the array
 

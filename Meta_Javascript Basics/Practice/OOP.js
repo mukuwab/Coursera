@@ -20,7 +20,7 @@ class FancyCat extends Cat {
     askTempermant() {
         console.log("My cat is so", this.temperment + ".");
     }
-
+ 
     askHairColor() {
         console.log("My cat's hair color is", this.hairColor + ".");
     }
