@@ -16,10 +16,12 @@ function Alert() {
       const timer = setTimeout(() => {
         setShow(false);
         onClose(); // make sure context updates
-      }, 3000);
+      }, 3000);//3 secs
 
       return () => clearTimeout(timer);
-    } else {
+    } 
+    
+    else {
       setShow(false);
     }
   }, [isOpen, onClose]);

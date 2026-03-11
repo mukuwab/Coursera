@@ -5,11 +5,11 @@
   justify-content: center;
   padding: 80px 20px;
   text-align: center;
-  background-color: #2A4365; /* same as before */
+  background-color: #51175e; /* same as before */
   color: white;
 }
 
-.landing-avatar {
+.landingSection-avatar {
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -17,13 +17,15 @@
   object-fit: cover;
 }
 
-.landing-heading {
-  font-size: 2.5rem;
+.landingSection-heading {
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 16px;
+  font-family: "Inter";
 }
 
-.landing-bio {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.landingSection-bio {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Inter";
 }

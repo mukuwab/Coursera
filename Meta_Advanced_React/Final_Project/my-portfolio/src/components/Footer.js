@@ -8,11 +8,12 @@ const Footer = () => {
         <Flex
           margin="0 auto"
           px={12}
-          color="white"
+          color="#ffffff"
           justifyContent="center"
           alignItems="center"
           maxWidth="1024px"
           height={16}
+          fontFamily="Inter"
         >
           <p>Yusra • © 2026</p>
         </Flex>

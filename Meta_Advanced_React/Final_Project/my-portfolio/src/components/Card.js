@@ -1,35 +1,59 @@
+//imports
 import { Heading, HStack, Image, Text, VStack, Box } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
 
-const Card = ({ title, description, imageSrc }) => {
+const Card = ({title, description, imageSrc}) => {
   return (
     <Box
-      borderRadius="md"
+      borderRadius="1rem"
       overflow="hidden"
-      boxShadow="lg"
-      backgroundColor="white"
-      color="black"
-      maxW="400px"
+      boxShadow="1rem"
+      backgroundColor="rgb(255, 255, 255)"
+      color="#502e4b"
+      maxW="406px"
       w="100%"
     >
-      {/* Project image */}
-      <Image src={imageSrc} alt={title} objectFit="cover" width="100%" height="200px" />
+      {/*Project Thumbnail*/}
+      <Image 
+        src={imageSrc} 
+        alt={title} 
+        objectFit="cover" 
+        width="100%" 
+        height="207px" />
 
-      {/* Content */}
-      <VStack spacing={3} align="start" p={4}>
-        <Heading as="h3" size="md">
+      {/*Content/Body*/}
+      <VStack 
+        spacing={2.5} 
+        align="start" 
+        p={4}>
+        <Heading 
+            fontSize="1.2rem"
+            fontFamily="Inter"
+            color="#a43b8a"
+            >
           {title}
         </Heading>
-        <Text fontSize="sm">{description}</Text>
-        <HStack spacing={2}>
-          <Text fontWeight="bold" color="blue.500">
+        <Text 
+            fontSize="0.7rem"
+            fontFamily="Inter"
+            >
+             {description}
+        </Text>
+        <HStack spacing={0.3}>
+          <Text 
+            fontWeight="4rem" 
+            color="pink.500" 
+            fontSize="0.86rem"
+            fontFamily="Inter">
             View Project
           </Text>
-          <FontAwesomeIcon icon={faArrowRight} />
+          <FontAwesomeIcon 
+            icon={faArrowRight} 
+            fontSize="0.7em" 
+            color="#d62ba9"/>
         </HStack>
-      </VStack>
+      </VStack> 
     </Box>
   );
 };

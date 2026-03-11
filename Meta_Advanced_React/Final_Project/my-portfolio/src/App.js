@@ -9,7 +9,6 @@ import Alert from "./components/Alert";
 function App() {
   return (
       <AlertProvider>
-        <h1>Hello</h1>
         <main>
           <Header />
           <LandingSection />
