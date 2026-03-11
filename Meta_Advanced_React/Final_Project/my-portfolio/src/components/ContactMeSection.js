@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -12,20 +12,57 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
-import * as Yup from 'yup';
+import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
+import { useAlertContext } from "../context/alertContext";
 
-const LandingSection = () => {
-  const {isLoading, response, submit} = useSubmit();
+const ContactMeSection = () => {
+  const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
+  // Formik configuration
   const formik = useFormik({
-    initialValues: {},
-    onSubmit: (values) => {},
-    validationSchema: Yup.object({}),
+    initialValues: {
+      firstName: "",
+      email: "",
+      type: "hireMe",
+      comment: "",
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      type: Yup.string().required("Required"),
+      comment: Yup.string().required("Required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      // Call submit helper from useSubmit hook
+      await submit(values);
+
+      // Reset handled in useEffect after response
+      resetForm();
+    },
   });
+
+  // Show alert when response changes
+  useEffect(() => {
+    if (!response) return;
+
+    if (response.type === "success") {
+      onOpen({
+        title: "Success",
+        description: `Thanks ${formik.values.firstName}, your message has been sent!`,
+        status: "success",
+      });
+      formik.resetForm();
+    } else if (response.type === "error") {
+      onOpen({
+        title: "Error",
+        description: response.message || "Something went wrong",
+        status: "error",
+      });
+    }
+  }, [response, onOpen]);
 
   return (
     <FullScreenSection
@@ -38,46 +75,57 @@ const LandingSection = () => {
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
-        <Box p={6} rounded="md" w="100%">
-          <form>
+        <Box p={6} rounded="md" w="100%" bg="white" color="black">
+          <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
-              <FormControl isInvalid={false}>
+              {/* Name */}
+              <FormControl
+                isInvalid={formik.touched.firstName && !!formik.errors.firstName}
+              >
                 <FormLabel htmlFor="firstName">Name</FormLabel>
-                <Input
-                  id="firstName"
-                  name="firstName"
-                />
-                <FormErrorMessage></FormErrorMessage>
+                <Input id="firstName" {...formik.getFieldProps("firstName")} />
+                <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={false}>
+
+              {/* Email */}
+              <FormControl
+                isInvalid={formik.touched.email && !!formik.errors.email}
+              >
                 <FormLabel htmlFor="email">Email Address</FormLabel>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                />
-                <FormErrorMessage></FormErrorMessage>
+                <Input id="email" type="email" {...formik.getFieldProps("email")} />
+                <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
+
+              {/* Type of enquiry */}
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type">
+                <Select id="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
+                  <option value="openSource">Open source consultancy session</option>
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={false}>
+
+              {/* Message */}
+              <FormControl
+                isInvalid={formik.touched.comment && !!formik.errors.comment}
+              >
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
-                  name="comment"
                   height={250}
+                  {...formik.getFieldProps("comment")}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                colorScheme="purple"
+                width="full"
+                isLoading={isLoading}
+              >
                 Submit
               </Button>
             </VStack>
@@ -88,4 +136,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default ContactMeSection;

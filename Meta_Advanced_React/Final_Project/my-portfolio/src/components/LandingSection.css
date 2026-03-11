@@ -1,0 +1,29 @@
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #2A4365; /* same as before */
+  color: white;
+}
+
+.landing-avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+
+.landing-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.landing-bio {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
