@@ -4,10 +4,10 @@ const greeting = "Hello, I am Yusra!";
 const bio1 = "A frontend developer";
 const bio2 = "specialised in React";
 
-// Use a combination of Avatar, Heading and VStack components.
 const LandingSection = () => {
   return (
     <section className="landing-section" id="landing-section">
+      
       {/*avatar*/}
       <img
         className="landingSection-avatar"
@@ -25,7 +25,7 @@ const LandingSection = () => {
         {greeting}
       </h1>
 
-      {/* Bio lines */}
+      {/* Bio text */}
       <p className="landingSection-bio">{bio1}</p>
       <p className="landingSection-bio">{bio2}</p>
     </section>

@@ -5,21 +5,38 @@ import { faGithub, faLinkedin, faMedium, faStackOverflow } from "@fortawesome/fr
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
-  {icon: faEnvelope, url: "mailto: hello@example.com"},
-  {icon: faGithub, url: "https://github.com"},
-  {icon: faLinkedin, url: "https://www.linkedin.com"},
-  {icon: faMedium, url: "https://medium.com"},
-  {icon: faStackOverflow, url: "https://stackoverflow.com"},
+  {
+    icon: faEnvelope,
+    url: "mailto: hello@example.com",
+  },
+  {
+    icon: faGithub,
+    url: "https://github.com",
+  },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com",
+  },
+  {
+    icon: faMedium,
+    url: "https://medium.com",
+  },
+  {
+    icon: faStackOverflow,
+    url: "https://stackoverflow.com",
+  },
 ];
 
 const Header = () => {
-  const headerRef = useRef(null);
-  const prevScrollY = useRef(0);
-
-  const handleClick = (focal) => () => {
-    const id = `${focal}-section`;
+  const handleClick = (anchor) => () => {
+    const id = `${anchor}-section`;
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   useEffect(() => {

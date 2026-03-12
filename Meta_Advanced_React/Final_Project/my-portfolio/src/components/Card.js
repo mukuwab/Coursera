@@ -4,16 +4,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({title, description, imageSrc}) => {
+
+// You can create a style object and pass it into the element for styling
+  //using the sx attribute
+const boxStyles = {
+
+      borderRadius:"1rem",
+      overflow:"hidden",
+      boxShadow:"1rem",
+      backgroundColor:"rgb(255, 255, 255)",
+      color:"#502e4b",
+      maxW:"406px",
+      w:"100%"
+}
+
   return (
-    <Box
-      borderRadius="1rem"
-      overflow="hidden"
-      boxShadow="1rem"
-      backgroundColor="rgb(255, 255, 255)"
-      color="#502e4b"
-      maxW="406px"
-      w="100%"
-    >
+    <Box sx={boxStyles}>
       {/*Project Thumbnail*/}
       <Image 
         src={imageSrc} 
@@ -23,6 +29,8 @@ const Card = ({title, description, imageSrc}) => {
         height="207px" />
 
       {/*Content/Body*/}
+      {/* Verticle Stack is used to align elements in a verticle fashion w/ ease
+      instead of using the align items on a box or container element */}
       <VStack 
         spacing={2.5} 
         align="start" 
@@ -40,6 +48,7 @@ const Card = ({title, description, imageSrc}) => {
             >
              {description}
         </Text>
+        {/* Horizontal stack aligns elements horizontally */}
         <HStack spacing={0.3}>
           <Text 
             fontWeight="4rem" 

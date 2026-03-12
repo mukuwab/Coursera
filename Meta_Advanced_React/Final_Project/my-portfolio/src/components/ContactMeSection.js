@@ -21,7 +21,7 @@ const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
-  // Formik configuration
+  //Formik config
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -36,15 +36,13 @@ const ContactMeSection = () => {
       comment: Yup.string().required("Required"),
     }),
     onSubmit: async (values, { resetForm }) => {
-      // Call submit helper from useSubmit hook
+      //use submit helper from useSubmit hook
       await submit(values);
-
-      // Reset handled in useEffect after response
       resetForm();
     },
   });
 
-  // Show alert when response changes
+  // Show the toast when 'response' updates to another value
   useEffect(() => {
     if (!response) return;
 
@@ -114,6 +112,7 @@ const ContactMeSection = () => {
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
+                  name="comment"
                   height={250}
                   {...formik.getFieldProps("comment")}
                 />
@@ -127,6 +126,7 @@ const ContactMeSection = () => {
                 width="full"
                 isLoading={isLoading}
               >
+                {/* use color scheme instead of color for auto hover effects */}
                 Submit
               </Button>
             </VStack>
