@@ -28,6 +28,12 @@ const socials = [
 ];
 
 const Header = () => {
+   // reference to header DOM element
+  const headerRef = useRef(null);
+
+  // store previous scroll position
+  const prevScrollY = useRef(0);
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
